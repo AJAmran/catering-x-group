@@ -4,10 +4,12 @@ import React, { useState } from 'react';
 import { Container, Section, SectionHeading, FadeIn } from '@/components/UI';
 import Image from 'next/image';
 import { SITE_DATA } from '@/lib/constants';
+import { X } from 'lucide-react';
 
 export default function GalleryClient() {
     const categories = ['All', ...new Set(SITE_DATA.gallery.map(img => img.category))];
     const [activeFilter, setActiveFilter] = useState('All');
+    const [selectedImage, setSelectedImage] = useState<typeof SITE_DATA.gallery[0] | null>(null);
 
     const filteredImages = activeFilter === 'All'
         ? SITE_DATA.gallery
@@ -48,6 +50,7 @@ export default function GalleryClient() {
                         {filteredImages.map((img, idx) => (
                             <div
                                 key={idx}
+                                onClick={() => setSelectedImage(img)}
                                 className="break-inside-avoid group relative rounded-[2rem] overflow-hidden cursor-pointer shadow-2xl shadow-neutral-200 border-8 border-white group"
                             >
                                 <Image
@@ -81,6 +84,54 @@ export default function GalleryClient() {
                     )}
                 </Container>
             </Section>
+
+            {/* Lightbox / Details Page Modal */}
+            {selectedImage && (
+                <div
+                    className="fixed inset-0 z-[60] bg-black/95 backdrop-blur-sm flex items-center justify-center p-4 md:p-8 animate-fade-in"
+                    onClick={() => setSelectedImage(null)}
+                >
+                    <button
+                        className="absolute top-4 right-4 md:top-8 md:right-8 text-white/50 hover:text-white transition-colors p-2 z-50 rounded-full bg-white/10"
+                        onClick={() => setSelectedImage(null)}
+                        aria-label="Close details"
+                    >
+                        <X size={32} />
+                    </button>
+
+                    <div
+                        className="relative w-full max-w-5xl max-h-[90vh] flex flex-col md:flex-row bg-white rounded-3xl overflow-hidden shadow-2xl"
+                        onClick={(e) => e.stopPropagation()}
+                    >
+                        {/* Image Side */}
+                        <div className="w-full md:w-2/3 bg-black relative min-h-[300px] md:min-h-[500px]">
+                            <Image
+                                src={selectedImage.src}
+                                alt={selectedImage.title}
+                                fill
+                                className="object-contain"
+                                sizes="(max-width: 768px) 100vw, 66vw"
+                                priority
+                            />
+                        </div>
+
+                        {/* Details Side */}
+                        <div className="w-full md:w-1/3 p-8 md:p-12 flex flex-col justify-center bg-white">
+                            <span className="inline-block self-start px-3 py-1 rounded-full bg-catering/10 text-catering text-[10px] font-bold uppercase tracking-widest mb-6">
+                                {selectedImage.category}
+                            </span>
+                            <h3 className="text-3xl md:text-4xl font-serif text-neutral-900 mb-6 leading-tight">
+                                {selectedImage.title}
+                            </h3>
+                            <div className="w-12 h-[2px] bg-neutral-100 mb-6"></div>
+                            <p className="text-neutral-500 font-light leading-relaxed text-sm md:text-base">
+                                Experience the visual journey of {selectedImage.title}.
+                                Part of our exclusive {selectedImage.category.toLowerCase()} collection.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            )}
         </div>
     );
 }

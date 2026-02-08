@@ -11,8 +11,8 @@ import { LegacySection } from '@/components/LegacySection';
 import { AppPromotion } from '@/components/AppPromotion';
 
 export const metadata = {
-  title: "X-Group Catering & Convention | Premier Event Services in Dhaka",
-  description: "Experience architectural grandeur and culinary excellence with X-Group Catering. Dhaka's premier convention halls and world-class catering services since 1992.",
+  title: "X-Group Chain Restaurant & Hospitality Management | Premier Event Services in Dhaka",
+  description: "Experience architectural grandeur and culinary excellence with X-Group Chain Restaurant & Hospitality Management. Dhaka's premier hospitality and world-class catering services since 1992.",
   alternates: {
     canonical: 'https://x-group-catering.com',
   },
@@ -64,7 +64,7 @@ export default function HomePage() {
 
               <FadeIn delay={300}>
                 <p className="text-xl md:text-2xl text-neutral-300 mb-10 max-w-xl font-light leading-relaxed border-l-8 border-convention pl-6">
-                  Dhaka&apos;s premier catering & convention services.
+                  Dhaka&apos;s premier chain restaurant, hospitality & catering services.
                   Where culinary excellence meets architectural grandeur.
                 </p>
               </FadeIn>

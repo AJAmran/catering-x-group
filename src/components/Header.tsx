@@ -121,10 +121,10 @@ export const Header = () => {
             {/* Mobile Menu */}
             <div
                 id="mobile-navigation"
-                className={`fixed inset-0 z-40 bg-neutral-100 transform transition-transform duration-500 lg:hidden flex flex-col pt-32 px-6 ${mobileOpen ? 'translate-x-0' : 'translate-x-full'}`}
+                className={`fixed inset-0 z-40 bg-neutral-100 transform transition-transform duration-500 lg:hidden flex flex-col pt-24 pb-10 px-6 overflow-y-auto ${mobileOpen ? 'translate-x-0' : 'translate-x-full'}`}
                 aria-hidden={mobileOpen ? "false" : "true"}
             >
-                <nav className="flex flex-col gap-4" aria-label="Mobile navigation">
+                <nav className="flex flex-col gap-4 min-h-0" aria-label="Mobile navigation">
                     {navItems.map((item, idx) => (
                         <Link
                             key={item}
@@ -142,7 +142,7 @@ export const Header = () => {
                             <ArrowRight size={24} aria-hidden="true" className="opacity-0 group-hover:opacity-100 -translate-x-4 group-hover:translate-x-0 transition-all duration-300" />
                         </Link>
                     ))}
-                    <div className="mt-8">
+                    <div className="mt-8 pb-8">
                         <Button href="/book-hall" onClick={() => setMobileOpen(false)} fullWidth variant="secondary" label="Book your hall or catering event">Book Your Event</Button>
                     </div>
                 </nav>

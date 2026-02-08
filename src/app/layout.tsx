@@ -22,23 +22,23 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   metadataBase: new URL('https://x-group-catering.com'),
   title: {
-    default: "X-Group Catering & Convention | Premier Event Services in Dhaka",
-    template: "%s | X-Group Catering & Convention"
+    default: "X-Group Chain Restaurant & Hospitality Management | Premier Event Services in Dhaka",
+    template: "%s | X-Group Chain Restaurant & Hospitality Management"
   },
-  description: "Dhaka's premier catering & convention services since 1992. Exclusive venues and culinary excellence for weddings, corporate events, and social gatherings.",
-  authors: [{ name: "X-Group Catering" }],
-  creator: "X-Group Catering",
-  publisher: "X-Group Catering",
+  description: "Dhaka's premier chain restaurant, hospitality & catering services since 1992. Exclusive venues and culinary excellence for weddings, corporate events, and social gatherings.",
+  authors: [{ name: "X-Group Chain Restaurant & Hospitality Management" }],
+  creator: "X-Group Chain Restaurant & Hospitality Management",
+  publisher: "X-Group Chain Restaurant & Hospitality Management",
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
   openGraph: {
-    title: "X-Group Catering & Convention | Curating Memories Since 1992",
-    description: "Dhaka's premier catering & convention services. Architectural elegance meets culinary artistry.",
+    title: "X-Group Chain Restaurant & Hospitality Management | Curating Memories Since 1992",
+    description: "Dhaka's premier chain restaurant, hospitality & catering services. Architectural elegance meets culinary artistry.",
     url: 'https://x-group-catering.com',
-    siteName: 'X-Group Catering',
+    siteName: 'X-Group Chain Restaurant & Hospitality Management',
     locale: 'en_US',
     type: 'website',
     images: [
@@ -46,14 +46,14 @@ export const metadata: Metadata = {
         url: '/catering-logo.png',
         width: 800,
         height: 600,
-        alt: 'X-Group Catering & Convention',
+        alt: 'X-Group Chain Restaurant & Hospitality Management',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'X-Group Catering & Convention',
-    description: "Dhaka's premier catering & convention services since 1992.",
+    title: 'X-Group Chain Restaurant & Hospitality Management',
+    description: "Dhaka's premier chain restaurant, hospitality & catering services since 1992.",
     images: ['/catering-logo.png'],
   },
   robots: {

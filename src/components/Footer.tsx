@@ -58,7 +58,7 @@ export const Footer = () => {
                             Elevating the art of <br /> hospitality since 1992.
                         </h2>
                         <p className="text-base md:text-lg leading-relaxed max-w-sm font-light text-neutral-300 text-justify">
-                            X-Group Catering & Convention is Dhaka's premier event management service, dedicated to architectural grandeur and culinary mastery.
+                            X-Group Chain Restaurant & Hospitality Management is Dhaka's premier event management service, dedicated to architectural grandeur and culinary mastery.
                         </p>
                         <div className="flex gap-4 pt-2">
                             {SITE_DATA.social_links.map(({ platform, url, label }, i) => {
@@ -201,7 +201,7 @@ export const Footer = () => {
 
                     <div className="flex flex-col md:flex-row items-center justify-between pt-8 border-t border-white/5 gap-8">
                         <p className="text-sm font-medium text-neutral-300 font-sans order-2 md:order-1">
-                            &copy; {new Date().getFullYear()} X-Group Catering & Convention. All Rights Reserved.
+                            &copy; {new Date().getFullYear()} X-Group Chain Restaurant & Hospitality Management. All Rights Reserved.
                         </p>
 
                         <nav className="flex flex-wrap justify-center gap-x-8 gap-y-2 order-1 md:order-2" aria-label="Policy links">

@@ -3,7 +3,7 @@ import { ImageResponse } from 'next/og';
 export const runtime = 'edge';
 
 // Image metadata
-export const alt = 'X-Group Catering & Convention';
+export const alt = 'X-Group Chain Restaurant & Hospitality Management';
 export const size = {
     width: 1200,
     height: 630,
@@ -15,9 +15,9 @@ export default async function Image() {
     // We can fetch custom fonts here if needed, but for reliability and speed
     // we'll use system fonts with careful styling.
 
-    const siteName = "X-Group Catering";
+    const siteName = "X-Group Chain Restaurant & Hospitality Management";
     const title = "Taste the Artistry of Hospitality";
-    const subtitle = "Dhaka's premier event management & catering services since 1992.";
+    const subtitle = "Dhaka's premier chain restaurant, hospitality management & catering services since 1992.";
 
     return new ImageResponse(
         (
