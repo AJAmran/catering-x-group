@@ -111,4 +111,4 @@ This project is proprietary software belonging to **X-Group Chain Restaurant & H
 
 ---
 
-Developed with ❤️ by the X-Group Tech Team.
+Developed with ❤️ by the X-Group Tech Tea
