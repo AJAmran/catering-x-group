@@ -1,0 +1,139 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-poppins), system-ui, sans-serif;
+  --font-serif: "Times New Roman", Times, serif;
+  --font-heading: var(--font-serif);
+
+  --color-background: #f5f5f7;
+  --color-foreground: #1e293b;
+
+  --color-convention: #2f528f;
+  --color-convention-light: #4a6fa5;
+  --color-convention-dark: #1e3a66;
+
+  --color-catering: #c41e3a;
+  --color-catering-light: #d64d63;
+  --color-catering-dark: #96152a;
+
+  --color-neutral-50: #f9fafb;
+  --color-neutral-100: #f5f5f7;
+  --color-neutral-200: #e5e5e7;
+  --color-neutral-800: #1e293b;
+  --color-neutral-900: #111d31;
+
+  --image-noise: url("data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.65%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22 opacity=%220.05%22/%3E%3C/svg%3E");
+
+  --animate-fade-up: fade-up 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-scale-in: scale-in 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-float: float 6s ease-in-out infinite;
+
+  --animate-ken-burns: ken-burns 20s ease-out infinite alternate;
+
+  --animate-hero-pulse: hero-pulse 10s ease-in-out infinite alternate;
+
+  @keyframes hero-pulse {
+    0% {
+      transform: scale(1.02);
+      filter: brightness(0.9) saturate(1.1);
+    }
+    100% {
+      transform: scale(1);
+      filter: brightness(1.1) saturate(1);
+    }
+  }
+  @keyframes fade-up {
+    0% {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes scale-in {
+    0% {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+}
+
+/* Custom Utilities */
+.bg-noise {
+  background-image: var(--image-noise);
+}
+
+.perspective-1000 {
+  perspective: 1000px;
+}
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+/* Hide scrollbar for clean horizontal scrolling */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+:root {
+  --background: #f5f5f7;
+  --foreground: #1a1a1a;
+}
+
+@media (prefers-color-scheme: dark) {
+  /* You can enable dark mode overrides here if desired, 
+     but the original design seems to enforce light mode 
+     except for specific dark sections. */
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  font-feature-settings:
+    "kern" 1,
+    "liga" 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Professional Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+}
+
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}
