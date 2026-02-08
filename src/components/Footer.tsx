@@ -23,20 +23,12 @@ export const Footer = () => {
         }
     };
 
-    const socialLinks = [
-        { Icon: Facebook, href: "https://www.facebook.com/xgroupchainrestaurant/", label: "Facebook" },
-        { Icon: Instagram, href: "https://www.instagram.com/xgroupchainrestaurants/", label: "Instagram" },
-        { Icon: Linkedin, href: "https://www.linkedin.com/company/x-group-chain-restaurant-hospitality-management/", label: "LinkedIn" },
-        { Icon: Youtube, href: "https://www.youtube.com/@xgroupchainrestaurantbd", label: "YouTube" }
-    ];
-
-    const portfolioItems = [
-        { name: 'Shimanto Convention', href: 'https://shimanto.x-grouprestaurant.com/' },
-        { name: 'Zam Zam Mirpur 01', href: 'https://zam-zam.x-grouprestaurant.com/' },
-        { name: 'Zam Zam Mirpur 11', href: 'https://zam-zam-mirpur-11.x-grouprestaurant.com/' },
-        { name: 'Signature Catering', href: '/menu' },
-        { name: 'MICE Services', href: '/halls' }
-    ];
+    const IconMap: { [key: string]: React.ElementType } = {
+        Facebook,
+        Instagram,
+        Linkedin,
+        Youtube
+    };
 
     return (
         <footer
@@ -51,14 +43,14 @@ export const Footer = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-16 lg:gap-8 mb-20">
                     {/* Column 1: Brand & Legacy */}
                     <div className="lg:col-span-4 space-y-8">
-                        <Link href="/" className="inline-block bg-white p-4 rounded-xl shadow-lg border border-white/10 group overflow-hidden relative">
+                        <Link href="/" className="inline-block bg-white p-[5px] rounded-xl shadow-lg border border-white/10 group overflow-hidden relative">
                             <div className="absolute inset-0 bg-neutral-100 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                             <Image
                                 src={SITE_DATA.site.assets.logo.url}
                                 alt={SITE_DATA.site.name}
                                 width={SITE_DATA.site.assets.logo.width}
                                 height={SITE_DATA.site.assets.logo.height}
-                                className="h-10 md:h-12 w-auto object-contain relative z-10"
+                                className="h-16 md:h-28 w-auto object-contain relative z-10"
                                 priority
                             />
                         </Link>
@@ -69,18 +61,21 @@ export const Footer = () => {
                             X-Group Catering & Convention is Dhaka's premier event management service, dedicated to architectural grandeur and culinary mastery.
                         </p>
                         <div className="flex gap-4 pt-2">
-                            {socialLinks.map(({ Icon, href, label }, i) => (
-                                <a
-                                    key={i}
-                                    href={href}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    aria-label={`Visit our ${label} page`}
-                                    className="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-neutral-300 hover:bg-white hover:text-black hover:-translate-y-1 transition-all duration-300 shadow-lg"
-                                >
-                                    <Icon size={20} />
-                                </a>
-                            ))}
+                            {SITE_DATA.social_links.map(({ platform, url, label }, i) => {
+                                const Icon = IconMap[platform] || ArrowRight;
+                                return (
+                                    <a
+                                        key={i}
+                                        href={url}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        aria-label={`Visit our ${label} page`}
+                                        className="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-neutral-300 hover:bg-white hover:text-black hover:-translate-y-1 transition-all duration-300 shadow-lg"
+                                    >
+                                        <Icon size={20} />
+                                    </a>
+                                );
+                            })}
                         </div>
                     </div>
 
@@ -88,7 +83,7 @@ export const Footer = () => {
                     <nav className="lg:col-span-2 lg:col-start-6" aria-labelledby="footer-portfolio-heading">
                         <h3 id="footer-portfolio-heading" className="text-white font-bold text-xl md:text-2xl uppercase tracking-[0.1em] mb-8">The Portfolio</h3>
                         <ul className="space-y-4 text-base">
-                            {portfolioItems.map(item => (
+                            {SITE_DATA.footer.portfolio.map(item => (
                                 <li key={item.name}>
                                     {item.href.startsWith('http') ? (
                                         <a
@@ -179,7 +174,7 @@ export const Footer = () => {
                     </div>
                     <div className="flex flex-col items-center md:items-end gap-3">
                         <div className="flex gap-6 items-center opacity-70 grayscale hover:grayscale-0 hover:opacity-100 transition-all duration-500">
-                            {['Foodpanda', 'Pathao'].map(p => (
+                            {SITE_DATA.footer.delivery_partners.map(p => (
                                 <span key={p} className="text-white font-bold italic text-lg font-sans">{p}</span>
                             ))}
                         </div>
@@ -193,7 +188,7 @@ export const Footer = () => {
                         <p className="text-center text-[10px] md:text-sm text-neutral-300 uppercase tracking-[0.5em] mb-8 font-bold font-sans">Secure Payment Gateways</p>
                         <div className="relative w-full h-12 md:h-20 transition-all duration-700">
                             <Image
-                                src="https://catering.x-grouprestaurant.com/uploads/SSLCommerz-Pay-With-logo-All-Size-03.png"
+                                src={SITE_DATA.footer.payment_gateway_img}
                                 alt="SSLCommerz Official Payment Gateway"
                                 title="SSLCommerz - Secure Payment Partner"
                                 width={1920}

@@ -56,6 +56,26 @@ export const SITE_DATA: SiteData = {
             { "year": "2021", "event": "Zam Zam Mirpur-11", "desc": "Expanding our convention hall capacity with a modern facility in Mirpur-11." },
             { "year": "2022", "event": "Foodbite", "desc": "Revolutionizing food accessibility through our premium delivery and subscription app." },
             { "year": "2023 - 24", "event": "BCFCC & XHTI", "desc": "Launching BCFCC and our Hospitality Training Institute (XHTI) for industry excellence." }
+        ],
+        "pillars": [
+            {
+                "title": "Culinary Mastery",
+                "desc": "Our award-winning chefs specialize in the delicate art of Thai, Chinese, and Traditional Bengali cuisines.",
+                "icon": "ChefHat",
+                "color": "bg-orange-50 text-orange-600 border-orange-100"
+            },
+            {
+                "title": "Architectural Grandeur",
+                "desc": "Our convention halls are designed with a focus on luxury, acoustics, and state-of-the-art event facilities.",
+                "icon": "Building2",
+                "color": "bg-blue-50 text-blue-600 border-blue-100"
+            },
+            {
+                "title": "Operational Precision",
+                "desc": "With 20+ outlets, our logistics and service teams ensure seamless execution for every event scale.",
+                "icon": "Award",
+                "color": "bg-emerald-50 text-emerald-600 border-emerald-100"
+            }
         ]
     },
     "gallery": [
@@ -787,6 +807,38 @@ export const SITE_DATA: SiteData = {
                 "description": "Thai Soup Thick/Tom Yum, Thai Green Papaya Salad, Noodles Salad, Mixed Fruits Salad, Banana Blossom Salad, Sliced Cucumber, Sliced Carrot, Onion Rings, Lemon Wedges, Fried Wonton, Thai Special Mixed Rice, Steamed Rice, Sautéed Fish With Mushroom and Ginger, Beef Chilli Onion, Garlic Chicken, Whole Steam Fish With Ginger Sauce, Stir Fried Water Spinach, Mixed Sautéed Vegetable, Banana Leaf and Sticky Rice, Coconut Rice Dumpling, Coconut Ice Cream, Sliced Plain Cake, Seasonal Slice Fruits, Assorted Soft Drinks, Mineral Water, Pan Box, Mouth Freshener, Tea or Coffee"
             }
         ]
+    },
+    "social_links": [
+        { "platform": "Facebook", "url": "https://www.facebook.com/xgroupchainrestaurant/", "label": "Facebook" },
+        { "platform": "Instagram", "url": "https://www.instagram.com/xgroupchainrestaurants/", "label": "Instagram" },
+        { "platform": "LinkedIn", "url": "https://www.linkedin.com/company/x-group-chain-restaurant-hospitality-management/", "label": "LinkedIn" },
+        { "platform": "YouTube", "url": "https://www.youtube.com/@xgroupchainrestaurantbd", "label": "YouTube" }
+    ],
+    "legacy_section": {
+        "title": "A Legacy of Excellence & Hospitality",
+        "subtitle": "Since 1992",
+        "image": "https://admin.x-grouprestaurant.com/uploads/06121823e79e0a2001601361a6c4b887.jpg",
+        "stats": {
+            "value": "20+",
+            "label": "Outlets in Dhaka"
+        },
+        "content": [
+            "X-group Chain Restaurant today symbolizes a name – a state of mind. Its journey to growth and prosperity began in **1992**. Today, X-group is one of the country's largest and leading restaurant service providers in Bangladesh, specializing in **Thai, Chinese, and Traditional Cuisine**.",
+            "We have created strong differentiation by offering quality foods, the best possible services, and authenticity to guests which are difficult to imitate. This reputation has enabled us to sustain leadership with **20 outlets** in prime locations of Dhaka city.",
+            "**X-group Catering** is a sister concern, launched on 1st October 2021 to provide the same trusted quality for your indoor and outdoor events. It's X-group Chain Restaurant and Hospitality Management Catering."
+        ],
+        "trade_license": "Trade/DSCC/018115/2021"
+    },
+    "footer": {
+        "portfolio": [
+            { "name": "Shimanto Convention", "href": "https://shimanto.x-grouprestaurant.com/" },
+            { "name": "Zam Zam Mirpur 01", "href": "https://zam-zam.x-grouprestaurant.com/" },
+            { "name": "Zam Zam Mirpur 11", "href": "https://zam-zam-mirpur-11.x-grouprestaurant.com/" },
+            { "name": "Signature Catering", "href": "/menu" },
+            { "name": "MICE Services", "href": "/halls" }
+        ],
+        "delivery_partners": ["Foodpanda", "Pathao"],
+        "payment_gateway_img": "https://catering.x-grouprestaurant.com/uploads/SSLCommerz-Pay-With-logo-All-Size-03.png"
     }
 };
 

@@ -51,7 +51,7 @@ export default function HomePage() {
                   <div className="flex -space-x-2">
                     {[1, 2, 3].map(i => <div key={i} className="w-6 h-6 rounded-full bg-neutral-200 border-2 border-neutral-900"></div>)}
                   </div>
-                  <span className="text-xs font-bold tracking-widest uppercase pr-2">Serving since 1992</span>
+                  <span className="text-xs font-bold tracking-widest uppercase pr-2">Serving {SITE_DATA.legacy_section.subtitle.toLowerCase()}</span>
                 </div>
               </FadeIn>
 
@@ -197,10 +197,10 @@ export default function HomePage() {
             </BentoCard>
 
             {/* 4. Statistics - Premium Visual */}
-            <BentoCard span={1} className="bg-white flex flex-col justify-center items-center text-center p-10 border-neutral-100 shadow-lg" aria-label="20 prime locations across Dhaka">
+            <BentoCard span={1} className="bg-white flex flex-col justify-center items-center text-center p-10 border-neutral-100 shadow-lg" aria-label={`${SITE_DATA.legacy_section.stats.value} prime locations across Dhaka`}>
               <div className="relative mb-4">
-                <span className="text-8xl md:text-9xl font-serif font-medium text-catering/10 absolute -inset-12 flex items-center justify-center select-none" aria-hidden="true">20</span>
-                <span className="text-7xl font-serif font-medium text-neutral-900 relative z-10">20</span>
+                <span className="text-8xl md:text-9xl font-serif font-medium text-catering/10 absolute -inset-12 flex items-center justify-center select-none" aria-hidden="true">{parseInt(SITE_DATA.legacy_section.stats.value)}</span>
+                <span className="text-7xl font-serif font-medium text-neutral-900 relative z-10">{SITE_DATA.legacy_section.stats.value}</span>
               </div>
               <div className="w-12 h-[2px] bg-catering/40 mb-4" aria-hidden="true"></div>
               <span className="text-xs font-black tracking-[0.3em] uppercase text-neutral-600">Prime Locations Across Dhaka</span>
@@ -213,7 +213,7 @@ export default function HomePage() {
                   <span className="text-xs font-black text-convention uppercase tracking-[0.3em]">Our Heritage</span>
                   <span className="flex-1 h-[1px] bg-neutral-100" aria-hidden="true"></span>
                 </div>
-                <h3 className="text-4xl font-serif text-neutral-900 mb-6">Since 1992</h3>
+                <h3 className="text-4xl font-serif text-neutral-900 mb-6">{SITE_DATA.legacy_section.subtitle}</h3>
                 <p className="text-neutral-600 leading-relaxed font-light mb-8 text-lg italic">
                   &ldquo;A journey of constant evolution, setting the gold standard for hospitality in Bangladesh for over three decades.&rdquo;
                 </p>

@@ -27,38 +27,22 @@ export default function AboutClient() {
                     />
 
                     <div className="grid md:grid-cols-3 gap-12 mt-20">
-                        {[
-                            {
-                                title: "Culinary Mastery",
-                                desc: "Our award-winning chefs specialize in the delicate art of Thai, Chinese, and Traditional Bengali cuisines.",
-                                icon: ChefHat,
-                                color: "bg-orange-50 text-orange-600 border-orange-100"
-                            },
-                            {
-                                title: "Architectural Grandeur",
-                                desc: "Our convention halls are designed with a focus on luxury, acoustics, and state-of-the-art event facilities.",
-                                icon: Building2,
-                                color: "bg-blue-50 text-blue-600 border-blue-100"
-                            },
-                            {
-                                title: "Operational Precision",
-                                desc: "With 20+ outlets, our logistics and service teams ensure seamless execution for every event scale.",
-                                icon: Award,
-                                color: "bg-emerald-50 text-emerald-600 border-emerald-100"
-                            }
-                        ].map((pillar, i) => (
-                            <FadeIn key={i} delay={i * 200} className="group cursor-default">
-                                <div className={`w-20 h-20 rounded-3xl ${pillar.color} border flex items-center justify-center mb-8 transform group-hover:rotate-12 transition-all duration-500 shadow-xl shadow-transparent group-hover:shadow-current/10`}>
-                                    <pillar.icon size={36} strokeWidth={1.5} />
-                                </div>
-                                <h4 className="text-2xl font-serif font-bold mb-4 text-neutral-900">{pillar.title}</h4>
-                                <p className="text-neutral-500 leading-relaxed font-light text-lg italic">{pillar.desc}</p>
-                                <div className="mt-6 flex items-center gap-2 text-neutral-300 group-hover:text-neutral-900 transition-colors">
-                                    <div className="w-6 h-px bg-current"></div>
-                                    <span className="text-[10px] uppercase font-bold tracking-[0.2em]">{pillar.title.split(' ')[0]}</span>
-                                </div>
-                            </FadeIn>
-                        ))}
+                        {SITE_DATA.about.pillars.map((pillar, i) => {
+                            const Icon = { ChefHat, Building2, Award }[pillar.icon] || ChefHat;
+                            return (
+                                <FadeIn key={i} delay={i * 200} className="group cursor-default">
+                                    <div className={`w-20 h-20 rounded-3xl ${pillar.color} border flex items-center justify-center mb-8 transform group-hover:rotate-12 transition-all duration-500 shadow-xl shadow-transparent group-hover:shadow-current/10`}>
+                                        <Icon size={36} strokeWidth={1.5} />
+                                    </div>
+                                    <h4 className="text-2xl font-serif font-bold mb-4 text-neutral-900">{pillar.title}</h4>
+                                    <p className="text-neutral-500 leading-relaxed font-light text-lg italic">{pillar.desc}</p>
+                                    <div className="mt-6 flex items-center gap-2 text-neutral-300 group-hover:text-neutral-900 transition-colors">
+                                        <div className="w-6 h-px bg-current"></div>
+                                        <span className="text-[10px] uppercase font-bold tracking-[0.2em]">{pillar.title.split(' ')[0]}</span>
+                                    </div>
+                                </FadeIn>
+                            );
+                        })}
                     </div>
                 </Container>
             </Section>

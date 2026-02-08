@@ -98,6 +98,12 @@ export interface SiteData {
   };
   about: {
     timeline: Milestone[];
+    pillars: {
+      title: string;
+      desc: string;
+      icon: string;
+      color: string;
+    }[];
   };
   gallery: GalleryImage[];
   halls: Hall[];
@@ -109,6 +115,24 @@ export interface SiteData {
       [key: string]: SetPackageItem[];
     };
     buffet_menu: BuffetItem[];
+  };
+  social_links: {
+    platform: string;
+    url: string;
+    label: string;
+  }[];
+  legacy_section: {
+    title: string;
+    subtitle: string;
+    stats: { value: string; label: string };
+    content: string[];
+    trade_license: string;
+    image: string;
+  };
+  footer: {
+    portfolio: { name: string; href: string }[];
+    delivery_partners: string[];
+    payment_gateway_img: string;
   };
 }
 

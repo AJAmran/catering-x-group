@@ -58,7 +58,7 @@ export const Header = () => {
                         className="flex items-center gap-3 cursor-pointer group"
                         aria-label="X-Group Catering Home"
                     >
-                        <div className="p-1 px-1.5 rounded-xl bg-white shadow-md transition-all duration-300">
+                        <div className="p-[3px] rounded-xl bg-white shadow-md transition-all duration-300">
                             <Image
                                 src={SITE_DATA.site.assets.logo.url}
                                 alt={SITE_DATA.site.name}
