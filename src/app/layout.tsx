@@ -67,6 +67,9 @@ export const metadata: Metadata = {
     apple: '/apple-touch-icon.png',
   },
   category: 'hospitality',
+  other: {
+    'og:logo': 'https://x-group-catering.com/catering-logo.png',
+  },
 };
 
 export default function RootLayout({
