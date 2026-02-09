@@ -41,14 +41,6 @@ export const metadata: Metadata = {
     siteName: 'X-Group Chain Restaurant & Hospitality Management',
     locale: 'en_US',
     type: 'website',
-    images: [
-      {
-        url: '/catering-logo.png',
-        width: 800,
-        height: 600,
-        alt: 'X-Group Chain Restaurant & Hospitality Management',
-      },
-    ],
   },
   twitter: {
     card: 'summary_large_image',
