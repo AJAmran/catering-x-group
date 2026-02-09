@@ -137,3 +137,16 @@ h6 {
 .font-sans {
   font-family: var(--font-sans);
 }
+
+/* Scaling for smaller devices */
+@media (max-width: 640px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 13px;
+  }
+}
