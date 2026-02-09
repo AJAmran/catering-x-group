@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     default: "X-Group Chain Restaurant & Hospitality Management | Premier Event Services in Dhaka",
     template: "%s | X-Group Chain Restaurant & Hospitality Management"
   },
-  description: "Dhaka's premier chain restaurant, hospitality & catering services since 1992. Exclusive venues and culinary excellence for weddings, corporate events, and social gatherings.",
+  description: "Dhaka's premier chain restaurant, hospitality & catering services since 1992. Exclusive venues & culinary excellence for weddings, corporate & social events.",
   authors: [{ name: "X-Group Chain Restaurant & Hospitality Management" }],
   creator: "X-Group Chain Restaurant & Hospitality Management",
   publisher: "X-Group Chain Restaurant & Hospitality Management",

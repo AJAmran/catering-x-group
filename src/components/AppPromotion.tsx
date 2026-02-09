@@ -84,7 +84,7 @@ export const AppPromotion = () => {
 
                         <FadeIn delay={600} className="relative z-10">
                             {/* Phone Mockup with subtle interaction */}
-                            <div className="relative w-[300px] h-[600px] bg-neutral-900 rounded-[3.5rem] border-[8px] border-neutral-800 shadow-[0_50px_100px_-20px_rgba(0,0,0,0.3)] overflow-hidden group">
+                            <div className="relative w-[280px] h-[560px] md:w-[300px] md:h-[600px] bg-neutral-900 rounded-[3.5rem] border-[8px] border-neutral-800 shadow-[0_50px_100px_-20px_rgba(0,0,0,0.3)] overflow-hidden group">
                                 {/* Notch */}
                                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-6 bg-neutral-900 rounded-b-3xl z-30"></div>
 

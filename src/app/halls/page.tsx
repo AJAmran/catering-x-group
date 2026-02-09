@@ -25,7 +25,7 @@ export default function HallsPage() {
                             return (
                                 <article key={idx} className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center group" aria-labelledby={`hall-name-${idx}`}>
                                     {/* Image Side - Alternating */}
-                                    <div className={`lg:w-1/2 relative h-[500px] w-full ${idx % 2 === 1 ? 'lg:order-2' : ''}`}>
+                                    <div className={`lg:w-1/2 relative h-[300px] md:h-[500px] w-full ${idx % 2 === 1 ? 'lg:order-2' : ''}`}>
                                         <Link href={`/halls/${slug}`} className="block h-full w-full" aria-label={`View details for ${location.name}`}>
                                             <div className="h-full w-full rounded-[3rem] overflow-hidden shadow-2xl relative z-10">
                                                 <Image

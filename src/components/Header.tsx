@@ -124,7 +124,7 @@ export const Header = () => {
                 className={`fixed inset-0 z-40 bg-neutral-100 transform transition-transform duration-500 lg:hidden flex flex-col pt-24 pb-10 px-6 overflow-y-auto ${mobileOpen ? 'translate-x-0' : 'translate-x-full'}`}
                 aria-hidden={mobileOpen ? "false" : "true"}
             >
-                <nav className="flex flex-col gap-4 min-h-0" aria-label="Mobile navigation">
+                <nav className="flex flex-col gap-2 min-h-0" aria-label="Mobile navigation">
                     {navItems.map((item, idx) => (
                         <Link
                             key={item}
@@ -132,17 +132,17 @@ export const Header = () => {
                             onClick={() => setMobileOpen(false)}
                             aria-current={isActive(item) ? "page" : undefined}
                             className={`
-                                text-3xl font-serif font-medium text-left py-4 border-b border-neutral-200
+                                text-2xl font-serif font-medium text-left py-4 border-b border-neutral-200
                                 flex justify-between items-center group
                                 ${isActive(item) ? 'text-convention' : 'text-neutral-900'}
                             `}
                             style={{ transitionDelay: `${idx * 50}ms` }}
                         >
                             {item}
-                            <ArrowRight size={24} aria-hidden="true" className="opacity-0 group-hover:opacity-100 -translate-x-4 group-hover:translate-x-0 transition-all duration-300" />
+                            <ArrowRight size={20} aria-hidden="true" className="opacity-0 group-hover:opacity-100 -translate-x-4 group-hover:translate-x-0 transition-all duration-300" />
                         </Link>
                     ))}
-                    <div className="mt-8 pb-8">
+                    <div className="mt-6 pb-8">
                         <Button href="/book-hall" onClick={() => setMobileOpen(false)} fullWidth variant="secondary" label="Book your hall or catering event">Book Your Event</Button>
                     </div>
                 </nav>

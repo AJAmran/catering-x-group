@@ -32,7 +32,7 @@ export const Footer = () => {
 
     return (
         <footer
-            className="bg-[#0f172a] text-neutral-200 pt-24 pb-12 rounded-t-[3rem] md:rounded-t-[5rem] mt-32 relative overflow-hidden font-sans border-t border-white/5"
+            className="bg-[#0f172a] text-neutral-200 pt-16 md:pt-24 pb-12 rounded-t-[2rem] md:rounded-t-[5rem] mt-20 md:mt-32 relative overflow-hidden font-sans border-t border-white/5"
             aria-label="Site Footer"
         >
             {/* Subtle light effect */}
@@ -40,9 +40,9 @@ export const Footer = () => {
             <div className="absolute -top-24 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-sky-900/10 blur-[120px] rounded-full pointer-events-none"></div>
 
             <Container className="relative z-10 px-6 lg:px-8">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-16 lg:gap-8 mb-20">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 mb-16 md:mb-20">
                     {/* Column 1: Brand & Legacy */}
-                    <div className="lg:col-span-4 space-y-8">
+                    <div className="lg:col-span-4 space-y-6 md:space-y-8">
                         <Link href="/" className="inline-block bg-white p-[5px] rounded-xl shadow-lg border border-white/10 group overflow-hidden relative">
                             <div className="absolute inset-0 bg-neutral-100 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                             <Image
@@ -50,14 +50,14 @@ export const Footer = () => {
                                 alt={SITE_DATA.site.name}
                                 width={SITE_DATA.site.assets.logo.width}
                                 height={SITE_DATA.site.assets.logo.height}
-                                className="h-16 md:h-28 w-auto object-contain relative z-10"
+                                className="h-12 md:h-16 lg:h-28 w-auto object-contain relative z-10"
                                 priority
                             />
                         </Link>
-                        <h2 className="text-3xl md:text-4xl font-serif text-white tracking-tight leading-tight">
+                        <h2 className="text-2xl md:text-3xl lg:text-4xl font-serif text-white tracking-tight leading-tight">
                             Elevating the art of <br /> hospitality since 1992.
                         </h2>
-                        <p className="text-base md:text-lg leading-relaxed max-w-sm font-light text-neutral-300 text-justify">
+                        <p className="text-sm md:text-base lg:text-lg leading-relaxed max-w-sm font-light text-neutral-300 text-justify">
                             X-Group Chain Restaurant & Hospitality Management is Dhaka's premier event management service, dedicated to architectural grandeur and culinary mastery.
                         </p>
                         <div className="flex gap-4 pt-2">

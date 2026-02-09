@@ -12,7 +12,7 @@ import { AppPromotion } from '@/components/AppPromotion';
 
 export const metadata = {
   title: "X-Group Chain Restaurant & Hospitality Management | Premier Event Services in Dhaka",
-  description: "Experience architectural grandeur and culinary excellence with X-Group Chain Restaurant & Hospitality Management. Dhaka's premier hospitality and world-class catering services since 1992.",
+  description: "Experience architectural grandeur & culinary excellence with X-Group Chain Restaurant & Hospitality Management. Premier catering services in Dhaka since 1992.",
   alternates: {
     canonical: 'https://x-group-catering.com',
   },
@@ -56,14 +56,14 @@ export default function HomePage() {
               </FadeIn>
 
               <FadeIn delay={200}>
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-medium mb-8 leading-[0.9] tracking-tighter">
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif font-medium mb-6 md:mb-8 leading-[0.9] tracking-tighter">
                   Taste the Artistry of <br />
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-catering-light to-white italic pr-4">X-Group Catering</span>
                 </h1>
               </FadeIn>
 
               <FadeIn delay={300}>
-                <p className="text-xl md:text-2xl text-neutral-300 mb-10 max-w-xl font-light leading-relaxed border-l-8 border-convention pl-6">
+                <p className="text-lg md:text-xl lg:text-2xl text-neutral-300 mb-8 md:mb-10 max-w-xl font-light leading-relaxed border-l-4 md:border-l-8 border-convention pl-4 md:pl-6">
                   Dhaka&apos;s premier chain restaurant, hospitality & catering services.
                   Where culinary excellence meets architectural grandeur.
                 </p>
@@ -99,7 +99,7 @@ export default function HomePage() {
 
           <BentoGrid aria-label="Our core services and venues">
             {/* 1. Grand Weddings - Cinematic Hero Card */}
-            <BentoCard span={2} href="/halls" aria-label="Explore our grand wedding venues" className="min-h-[480px] text-white flex flex-col justify-end group p-12 overflow-hidden border-0 bg-convention-dark shadow-2xl">
+            <BentoCard span={2} href="/halls" aria-label="Explore our grand wedding venues" className="min-h-[350px] md:min-h-[480px] text-white flex flex-col justify-end group p-6 md:p-12 overflow-hidden border-0 bg-convention-dark shadow-2xl">
               <div className="absolute inset-0 z-0" aria-hidden="true">
                 <Image
                   src={SITE_DATA.site.assets.wedding_img}
@@ -133,7 +133,7 @@ export default function HomePage() {
             </BentoCard>
 
             {/* 2. Premium Catering - Editorial Style */}
-            <BentoCard span={1} href="/menu" className="bg-white min-h-[480px] flex flex-col group p-10 border-neutral-100 shadow-xl hover:shadow-2xl hover:shadow-catering/5 transition-all">
+            <BentoCard span={1} href="/menu" className="bg-white min-h-[350px] md:min-h-[480px] flex flex-col group p-6 md:p-10 border-neutral-100 shadow-xl hover:shadow-2xl hover:shadow-catering/5 transition-all">
               <div className="flex-1">
                 <div className="inline-flex items-center justify-center p-4 rounded-2xl bg-catering/5 text-catering mb-8 group-hover:bg-catering group-hover:text-white transition-all duration-500" aria-hidden="true">
                   <Utensils size={32} strokeWidth={1.5} />
@@ -158,7 +158,7 @@ export default function HomePage() {
             </BentoCard>
 
             {/* 3. Corporate & Governance */}
-            <BentoCard span={1} href="/halls" className="bg-[#111d31] text-white min-h-[480px] flex flex-col justify-between group p-10 relative overflow-hidden border-0 shadow-2xl">
+            <BentoCard span={1} href="/halls" className="bg-[#111d31] text-white min-h-[350px] md:min-h-[480px] flex flex-col justify-between group p-6 md:p-10 relative overflow-hidden border-0 shadow-2xl">
               {/* Decorative Subtle Background Pattern */}
               <div className="absolute inset-0 opacity-10 pointer-events-none" aria-hidden="true">
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_#2f528f_0%,_transparent_60%)]"></div>
@@ -318,11 +318,11 @@ export default function HomePage() {
             </div>
 
             {/* Visual Pillar - Complex Dish Arrangement */}
-            <div className="lg:w-7/12 relative min-h-[500px] w-full mt-12 lg:mt-0">
+            <div className="lg:w-7/12 relative min-h-[400px] md:min-h-[500px] w-full mt-12 lg:mt-0">
               {/* Dynamic Abstract Shapes */}
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] pointer-events-none z-0" aria-hidden="true">
-                <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-catering/5 rounded-full blur-3xl animate-float"></div>
-                <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-convention/5 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
+                <div className="absolute top-1/4 left-1/4 w-48 h-48 md:w-64 md:h-64 bg-catering/5 rounded-full blur-3xl animate-float"></div>
+                <div className="absolute bottom-1/4 right-1/4 w-60 h-60 md:w-80 md:h-80 bg-convention/5 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
               </div>
 
               <div className="relative h-full flex items-center justify-center">
@@ -341,7 +341,7 @@ export default function HomePage() {
                 </FadeIn>
 
                 {/* Secondary Floating Dish */}
-                <FadeIn delay={700} className="absolute -bottom-10 -left-4 lg:-left-12 z-30 w-1/2 animate-float shadow-[0_20px_40px_-10px_rgba(0,0,0,0.4)] border-[10px] border-white rounded-full overflow-hidden transform hover:scale-105 transition-transform duration-500">
+                <FadeIn delay={700} className="absolute -bottom-10 -left-4 lg:-left-12 z-30 w-1/2 animate-float shadow-[0_20px_40px_-10px_rgba(0,0,0,0.4)] border-[6px] md:border-[10px] border-white rounded-full overflow-hidden transform hover:scale-105 transition-transform duration-500">
                   <Image
                     src="https://res.cloudinary.com/dhukcjdmi/image/upload/v1770524541/Kofta_polao_1_tprcox.jpg"
                     alt="Specialty Polao"

@@ -20,7 +20,7 @@ export const Section = ({
     className?: string;
     id?: string;
 }) => (
-    <section id={id} className={`py-20 md:py-32 relative overflow-hidden ${className}`}>
+    <section id={id} className={`py-16 md:py-24 lg:py-32 relative overflow-hidden ${className}`}>
         {children}
     </section>
 );

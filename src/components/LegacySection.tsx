@@ -17,9 +17,9 @@ export const LegacySection = () => {
 
                 <div className="grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
                     {/* Image Side */}
-                    <div className="relative order-2 md:order-1 h-[500px] w-full">
+                    <div className="relative order-2 md:order-1 h-[300px] md:h-[500px] w-full">
                         <div className="absolute -top-6 -left-6 w-32 h-32 border-t-4 border-l-4 border-catering rounded-tl-[3rem] z-0"></div>
-                        <div className="relative w-full h-full z-10 rounded-[3rem] overflow-hidden shadow-2xl">
+                        <div className="relative w-full h-full z-10 rounded-[2rem] md:rounded-[3rem] overflow-hidden shadow-2xl">
                             <Image
                                 src={image}
                                 alt="X-Group Legacy"
